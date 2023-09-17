@@ -1,0 +1,506 @@
+{% extends 'mybog/mylayout.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 class="fs-3" data-aos="fade-down">Welcome to <span>HK education agency</span></h2>
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div id="slideb" class="carousel-item active slidee"></div>
+      <div class="carousel-item slidea"></div>
+      <div class="carousel-item slideb"></div>
+      <div class="carousel-item slidec"></div>
+      <div class="carousel-item slided"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="get-started section-bg bg-white">
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+            <div class="content">
+              <h3>About Us</h3>
+              <p>HK abroad education agency is an educational consultancy and a recruitment partner in partnership with universities in different part of the world.
+                We facilitate the mobility of student application and admission, deliver exceptional quality customer service and are result oriented.
+                HK abroad education agency has a wide range of partnered universities to suit everyone’s preference. We provide the best educational advice for the right choice of courses leading to their career path.
+                We provide visa assistance and offer travel arrangement and accommodation in Hungary.
+                Our team is made up of professional and experienced members who have an in depth knowledge in our partnered country’s education system.
+                .</p>
+              <a href="{% url 'mybog:about' %}" class="btn btn-outline-warning p-2 mt-2">Learn More<i class="bi bi-chevron-double-right"></i></a>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade">
+            <img class="mr-1" src="{% static 'mybog/assets/img/bookss.png'%}" alt="">
+          </div><!-- End Quote Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Get Started Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Services</h2>
+          <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-book"></i>
+              </div>
+              <h3>University Admissions</h3>
+              <p>HK abroad education agency is qualified and well informed in the complete university admission process and can guarantee qualified applicants admission to the best universities. In order to provide exceptional services to students, we provide full-fledged information about the different countries, available courses and universities so that they ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-person-vcard"></i>
+              </div>
+              <h3>Admission Formalities</h3>
+              <p>Being your career consultant, we are responsible to undergo all the admission and visa formalities. To make your study abroad journey simpler, we are having specific departments that can solve your queries efficiently and provide end-to-end guidance on documents and other requirements.
+                 We update our students with every step taken on their profile.</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-house"></i>
+              </div>
+              <h3>Visa Services</h3>
+              <p>Visa Processing and Visa file preparation keeps high importance in the entire process of studying abroad as it is impossible to fly without visa. At HK education agency, we have segregated department for Visa that provide complete visa guidance to students. Every country has different rules and regulations, which keep changing time to time and therefore students, should be ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-airplane"></i>
+              </div>
+              <h3>Accommodation</h3>
+              <p>Most of the students are very unaware about the living expenses and accommodation part. So, we help our students to get the accommodation done at the affordable prices and with all required facilities. Some universities provide on- campus accommodation, which can be pre-, booked at the time of admission. In another case,
+                 we can provide adequate ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-search-heart"></i>
+              </div>
+              <h3>Travel Arrangements</h3>
+              <p>Travelling covers a huge cost of studying abroad so it is important not to ignore this part and pre booked your air tickets. As we provide end to end services, we can also arrange flight tickets for the students at feasible costs. Our travel agents endow with the complete travel information and ensure to make your travel comfortable. Apart from this, we also provide pick-up facility ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Pre Departure Briefing</h3>
+              <p>At HK education agency, we believe that students must be well-aware about the destination country’s culture and fundamental laws. Therefore, we conduct a pre departure briefing session for our students to dispense important information about the common and uncommon issues. Our experts interact with students and try to solve their real time queries and ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Foreign Exchange</h3>
+              <p>Students need huge amount of foreign currency when they are visiting abroad for study purpose. We are associated with reliable forex vendors that can provide required currency as well as forex card to meet day to day expenses. We ensure that students
+                 get foreign exchange at the best possible rates. It will help students to manage their expenses easily.</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Alumni Support</h3>
+              <p>We have created a network of alumni, which continuously shares their living as well as study experience with us. It makes easy for us to guide our students with the honest experiences of our alumni. When students arrive, they can take help from alumni team and solve their general queries such as food, transportation, study material etc. We provide
+                 contact details of our alumni ...</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>On- Arrival Formalities</h3>
+              <p>When students arrives the destination country and university, they not need to be worry as all the formalities and
+                 documents are already arranged by us. Our partner universities will help students to get all the official formalities to be done.</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Post- Arrival Services</h3>
+              <p>We not only believe in sending students to study abroad but provide continuous support during the entire study period. If students face any issues while 
+                studying, they can easily contact us to get the right solution.</p>
+              <a href="{% url 'mybog:service' %}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+        <!-- ======= Alt Services Section ======= -->
+        <section id="alt-services" class="alt-services">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row justify-content-around gy-4">
+                <h3>Why Us?</h3>
+                <p>We are specialized in providing access to the best universities and delivering exceptional customer service that offers a stress-free process to study, learn and live abroad.
+                  Other factors that set us apart from others
+                  </p>
+    
+                <div class="flex d-flex justify-content-between">
+                  <div class="icon-box service-item d-flex position-relative col-lg-6 col-md" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-patch-check flex-shrink-0"></i>
+                    <div>
+                      <h4><a href="" class="stretched-link">Our professional Team</a></h4>
+                      <p>We are specialized in providing access to the best universities and 
+                        delivering exceptional customer service that offers a stress-free process to s
+                        tudy, learn and live abroad.
+                        Other factors that set us apart from others
+                        </p>
+                    </div>
+                  </div><!-- End Icon Box -->
+      
+                  <div class="icon-box d-flex position-relative col-lg-6 col-md" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-brightness-high flex-shrink-0"></i>
+                    <div>
+                      <h4><a href="" class="stretched-link">Meet University’s Representative Directly</a></h4>
+                      <p>We understand that students are always curious to solve their admission and visa queries from the right person and therefore we conduct regular seminars to make them updated. Different universities visit our offices on regular intervals that help students
+                         to interact with them directly and enroll themselves accordingly.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+                </div>
+
+
+                <div class="flex d-flex justify-content-between">
+                  <div class="icon-box d-flex position-relative col-lg-6 col-md" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-brightness-high flex-shrink-0"></i>
+                    <div>
+                      <h4><a href="" class="stretched-link">100% Student Satisfaction</a></h4>
+                      <p>Our support does not end until our students get satisfied. We believe in 100% satisfaction policy and therefore provide complete support at every step of your study journey. From the enrolment to your study completion,
+                         we are with you as a backbone and maintain a friendly network with you.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+      
+                  <div class="icon-box d-flex position-relative col-lg-6 col-md" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-brightness-high flex-shrink-0"></i>
+                    <div>
+                      <h4><a href="" class="stretched-link">Guidance on Career Opportunities</a></h4>
+                      <p>You might be quite confused about your study program and destination country but our counselors are well experienced and will help you out with the best options available across the world. They will introduce you with the both positive and negative aspects of your choice so that you can get a clear picture and make a fair decision for your career.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+                </div>
+
+                <div class="flex d-flex justify-content-between">
+                  <div class="icon-box d-flex position-relative col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-brightness-high flex-shrink-0"></i>
+                    <div>
+                      <h4><a href="" class="stretched-link">Proven Track Record</a></h4>
+                      <p>We are abide with proven track record of delivering high quality, customized support to students that brings successful outcomes HK abroad education agency has already
+                         marked a benchmark in the industry by offering outstanding services in the industry.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+                </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-map"></i>
+              <h3>Our Address</h3>
+              <p>Makumbusho, Dar Es Salaam, Tanzania</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@hcaec.co.tz</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+255 745656 712</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+          <div class="col-lg-6 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.387646392819!2d39.240786672371506!3d-6.788476083901584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c0fc3f3bbc9%3A0x7d797376d0ebc3f1!2sMakumbusho%2C%20Dar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1690897730919!5m2!1sen!2stz" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="" method="post" role="form" class="myform">
+              {% csrf_token %}
+              <div class="row gy-4">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>What Our Clients Says...</p>
+        </div>
+
+        <div class="slides-2 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up">
+      <div class=" section-header">
+        <h2>Recent Blog Posts</h2>
+        <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+      </div>
+
+      <div class="row gy-5">
+
+        {% for post in post %}
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative">
+              <span class="post-date">{{post.date}}</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">{{post.title}}</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">{{post.author}}</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">{{post.about}}</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="{% url 'mybog:blogdetail' post.id %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        {% endfor %}
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section -->
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

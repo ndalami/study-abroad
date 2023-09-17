@@ -1,0 +1,109 @@
+{% extends 'mybog/mylayout.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Blog Details</h2>
+        <ol>
+          <li><a href="{% url 'mybog:index' %}">Home</a></li>
+          <li>Blog Details</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <article class="blog-details">
+              <h2 class="title">{{post.title}}</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{post.author}}</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-folder"></i>{{post.about}}</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> {{post.date}}</li>
+                </ul>
+              </div><!-- End meta top -->
+
+              <div class="content">
+                <p>
+                    {{post.bdy}}
+                </p>
+
+              </div><!-- End post content -->
+
+              <div class="meta-bottom">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  <li>{{post.about}}</li>
+                </ul>
+              </div><!-- End meta bottom -->
+
+            </article><!-- End blog post -->
+
+            <div class="post-author d-flex align-items-center">
+              <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
+              <div>
+                <h4>HCAEC</h4>
+                <div class="social-links">
+                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                </p>
+              </div>
+            </div><!-- End post author -->
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <div class="sidebar-item recent-posts">
+                <h3 class="sidebar-title">Recent Posts</h3>
+
+                <div class="mt-3">
+                    {% for posts in posts %}
+
+                  <div class="post-item mt-3">
+                    <div>
+                      <h4><a href="{% url 'mybog:blogdetail' post.id %}">{{posts.title}}</a></h4>
+                      <p>{{posts.date}}</p>
+                    </div>
+                  </div><!-- End recent post item-->
+                   {% endfor %}
+
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <div class="post-item mt-3">
+                <h4 class=""><a href="{% url 'mybog:blog' %}">View All &raquo</a></h4>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End Blog Sidebar -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock content %}

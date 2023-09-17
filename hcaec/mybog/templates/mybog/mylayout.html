@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HCAEC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'mybog/assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/assets/bootstrap/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/assets/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'mybog/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'myblog/assets/css/main.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'mybog:index' %}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>HK education agency<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'mybog:index' %}" class="active">Home</a></li>
+          <li><a href="{% url 'mybog:about' %}">About</a></li>
+          <li><a href="{% url 'mybog:service' %}">Services</a></li>
+          <li><a href="{% url 'mybog:contact' %}">Contact</a></li>
+          <li><a href="{% url 'mybog:blog' %}">Blog</a></li>
+          <li><a href="{% url 'mybog:university' %}">Universities</a></li>
+          <li><a href="{% url 'mybog:apply' %}" class="btn btn-outline-warning text-white p-2 rounded-pill">Apply Now</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  {% block content %}
+
+
+  {% endblock content %}
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h2>HK education agency</h2>
+              <p>
+                Makumbusho <br>
+                Dar Es Salaam, Tanzania<br><br>
+                <strong>Phone:</strong> +255 745656712<br>
+                <strong>Email:</strong> info@hcaec.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="{% url 'mybog:index' %}">Home</a></li>
+              <li><a href="{% url 'mybog:about' %}">About us</a></li>
+              <li><a href="{% url 'mybog:service' %}">Services</a></li>
+              <li><a href="{% url 'mybog:contact' %}">Contact Us</a></li>
+              <li><a href="{% url 'mybog:university' %}">Universities</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">University Admissions</a></li>
+              <li><a href="#">Ticket and Visa Assistance</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Travel Arrangements</a></li>
+              <li><a href="#">Welfare & Monitoring</a></li>
+              <li><a href="#">Education Advice</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; <a href="{% url 'admin:index' %}">Copyright</a> <strong><span>WIBOTEC</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://wibotec.github.io">WIBOTEC</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'mybog/assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'mybog/assets/bootstrap/js/bootstrap.bundle.js' %}"></script>
+  <script src="{% static 'mybog/aos/aos.js' %}"></script>
+  <script src="{% static 'mybog/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'mybog/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'mybog/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'mybog/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'mybog/assets/js/main.js' %}"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

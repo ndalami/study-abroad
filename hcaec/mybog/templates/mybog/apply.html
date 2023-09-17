@@ -1,0 +1,74 @@
+{% extends 'mybog/mylayout.html' %}
+{% load static %}
+
+{% block content %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Apply Now</h2>
+        <ol>
+          <li><a href="{% url 'mybog:index' %}">Home</a></li>
+          <li>Apply</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+<section class="mx-2">
+  <div class="mt-2 ms-1 me-1">
+    <div class="section-header">
+      <h2>Let's Handle Your Application </h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore illo excepturi placeat ea minima. Autem eius facere tenetur impedit?</p>
+    </div>
+ 
+    <form class="row g-3" method="POST" action="" class="myform">
+        {% csrf_token %}
+          <div class="col-md-4">
+            {{form.studentFirstName}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentMiddleName}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentLastName}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentGender}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentEmail}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentPhone}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentLevel}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentCourse}}
+          </div>
+          <div class="col-md-4">
+            {{form.studentCountry}}
+          </div>
+          <div class="col-md-4 mb-3">
+            {{form.parentPhone}}
+          </div>
+
+          <div class="mx-auto  text-center py-2">
+            <button type="submit" class="col-md-3  text-white py-2 bg-warning border border-warning">Apply Now</button>
+          </div>
+
+          
+    </form>   
+  
+</div>
+</section>
+
+  </main><!-- End #main -->
+
+
+{% endblock content %}
